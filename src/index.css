@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+:root {
+  --fnt-size-sm: 0.875rem;
+  --fnt-size-md: 1rem;
+  --fnt-size-lg: 1.125rem;
+  --fnt-size-xl: 1.25rem;
+  --fnt-size-2xl: 1.5rem;
+  --fnt-size-3xl: 2rem;
+  --fnt-size-4xl: 2.5rem;
+}
+
 * {
   margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }

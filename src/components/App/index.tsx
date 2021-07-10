@@ -1,8 +1,15 @@
 import React from "react";
 import "./App.css";
 
-function App() {
-  return <h1>App Component</h1>;
-}
+import BEMHelper from "react-bem-helper";
+import Search from "../Search";
+
+const classes = new BEMHelper("app");
+
+const App = () => (
+  <div {...classes()}>
+    <Search />
+  </div>
+);
 
 export default App;
