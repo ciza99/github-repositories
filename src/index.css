@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
 :root {
+  --clr-primary: #5870b5;
+  --clr-secondary: #3e4e80;
   --fnt-size-sm: 0.875rem;
   --fnt-size-md: 1rem;
   --fnt-size-lg: 1.125rem;
