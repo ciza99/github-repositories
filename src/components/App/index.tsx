@@ -5,6 +5,7 @@ import BEMHelper from "react-bem-helper";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../Header";
 import Home from "../Home";
+import UserPage from "../UserPage";
 
 const classes = new BEMHelper("app");
 
@@ -15,6 +16,9 @@ const App = () => (
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/users/:username">
+          <UserPage />
         </Route>
       </Switch>
     </Router>

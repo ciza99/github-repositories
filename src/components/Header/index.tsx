@@ -14,8 +14,7 @@ const Header = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
-    history.push(`/users/${data.username}`);
+    history.push(`/users/${data.username}/info`);
   });
 
   return (

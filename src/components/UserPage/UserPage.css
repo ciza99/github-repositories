@@ -1,0 +1,28 @@
+.user-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  --avatar-size: 8rem;
+}
+
+.user-page__panel {
+  background-color: var(--clr-extralight-grey);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-page__avatar {
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.75rem grey;
+}
+
+.user-page__username {
+  margin-top: 0.5rem;
+  font-size: var(--fnt-size-2xl);
+  font-weight: 700;
+}
