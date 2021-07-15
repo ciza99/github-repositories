@@ -4,15 +4,18 @@ import "./Header.css";
 import BEMHelper from "react-bem-helper";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import { WhiteButton, WhiteTextField } from "./StyledInputs";
 
 const classes = new BEMHelper("header");
 
 const Header = () => {
+  const history = useHistory();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
+    history.push(`/users/${data.username}`);
   });
 
   return (

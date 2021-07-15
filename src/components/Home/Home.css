@@ -10,7 +10,7 @@
 .home__subheading {
   color: var(--clr-dark-grey);
   margin-bottom: 2rem;
-  max-width: 50%;
+  max-width: 50rem;
 }
 
 @media only screen and (min-width: 700px) {
