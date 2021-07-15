@@ -3,6 +3,9 @@
 :root {
   --clr-primary: #5870b5;
   --clr-secondary: #3e4e80;
+  --clr-dark-grey: #666;
+  --clr-light-grey: #a1a1a1;
+  --clr-extralight-grey: #e9e9e9;
   --fnt-size-sm: 0.875rem;
   --fnt-size-md: 1rem;
   --fnt-size-lg: 1.125rem;
@@ -10,6 +13,7 @@
   --fnt-size-2xl: 1.5rem;
   --fnt-size-3xl: 2rem;
   --fnt-size-4xl: 2.5rem;
+  --screen-padding: 1.5rem;
 }
 
 * {

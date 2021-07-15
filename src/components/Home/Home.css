@@ -1,0 +1,31 @@
+.home {
+  padding: var(--screen-padding);
+}
+
+.home__heading {
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+}
+
+.home__subheading {
+  color: var(--clr-dark-grey);
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .home {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+  }
+
+  .home__subheading {
+    margin-bottom: 4rem;
+  }
+
+  .home__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

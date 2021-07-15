@@ -5,6 +5,7 @@ module.exports = {
   },
   rules: {
     "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
   },
   ignorePatterns: [".eslintrc.js"],
 };
