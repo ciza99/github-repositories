@@ -19,7 +19,7 @@ const RepoCard: FC<Props> = ({ repository }) => (
   <div {...classes()}>
     <div {...classes("header")}>
       <p {...classes("title")}>{repository.name}</p>
-      <a {...classes("link")} href={repository.url}>
+      <a {...classes("link")} href={repository.html_url}>
         view on github
       </a>
     </div>
