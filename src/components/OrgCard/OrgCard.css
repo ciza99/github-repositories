@@ -40,6 +40,7 @@
 .org-card__id {
   font-size: var(--fnt-size-lg);
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .org-card__description {

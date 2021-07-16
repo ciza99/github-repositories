@@ -17,6 +17,12 @@ const classes = new BEMHelper("user-nav");
 const UserNav = () => {
   const match = useRouteMatch();
 
+  const fallback = (
+    <div {...classes("spinner-wrapper")}>
+      <Spinner />
+    </div>
+  );
+
   return (
     <div {...classes()}>
       <nav {...classes("nav")}>
@@ -28,7 +34,7 @@ const UserNav = () => {
         />
         <NavItem Icon={DomainOutlinedIcon} linkTo="orgs" text="organizations" />
       </nav>
-      <React.Suspense fallback={<Spinner />}>
+      <React.Suspense fallback={fallback}>
         <Switch>
           <Route path={`${match.path}/info`}>
             <Information />

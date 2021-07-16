@@ -1,13 +1,20 @@
 .organizations {
+  display: flex;
+  flex-direction: column;
   padding-top: var(--screen-padding);
   padding-bottom: var(--screen-padding);
+  gap: 2rem;
+}
+
+.organizations__username {
+  color: var(--clr-primary);
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 700px) {
   .organizations {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
   }

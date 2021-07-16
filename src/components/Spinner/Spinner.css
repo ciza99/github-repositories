@@ -9,6 +9,7 @@
   width: var(--spinner-size);
   display: grid;
   place-items: center;
+  margin: 2rem;
 }
 
 @keyframes Spin {
