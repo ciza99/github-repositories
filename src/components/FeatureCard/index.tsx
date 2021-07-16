@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import "./FeatureCard.css";
 
 import BEMHelper from "react-bem-helper";
-import { OverridableComponent } from "@material-ui/core/OverridableComponent";
-import { SvgIconTypeMap, withStyles } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
+import { MaterialIcon } from "../../types/MaterialIcon";
 
 const classes = new BEMHelper("feature-card");
 
@@ -15,7 +15,7 @@ const makePrimaryColor = withStyles({
 });
 
 interface Props {
-  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+  Icon: MaterialIcon;
   title: string;
   text: string;
 }

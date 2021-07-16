@@ -2,14 +2,13 @@ import React, { FC } from "react";
 import "./NavItem.css";
 
 import BEMHelper from "react-bem-helper";
-import { SvgIconTypeMap } from "@material-ui/core";
-import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 import { NavLink } from "react-router-dom";
+import { MaterialIcon } from "../../types/MaterialIcon";
 
 const classes = new BEMHelper("nav-item");
 
 interface Props {
-  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+  Icon: MaterialIcon;
   linkTo: string;
   text: string;
 }

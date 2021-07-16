@@ -2,13 +2,12 @@ import React, { FC } from "react";
 import "./InfoItem.css";
 
 import BEMHelper from "react-bem-helper";
-import { SvgIconTypeMap } from "@material-ui/core";
-import { OverridableComponent } from "@material-ui/core/OverridableComponent";
+import { MaterialIcon } from "../../types/MaterialIcon";
 
 const classes = new BEMHelper("info-item");
 
 interface Props {
-  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+  Icon: MaterialIcon;
   text: string;
 }
 
