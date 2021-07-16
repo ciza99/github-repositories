@@ -1,6 +1,14 @@
 .repositories {
   display: flex;
   flex-direction: column;
-  padding-top: var(--screen-padding);
-  row-gap: 2rem;
+  padding: var(--screen-padding) 0;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .repositories {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: var(--screen-padding) 3rem;
+  }
 }

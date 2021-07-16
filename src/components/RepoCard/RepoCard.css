@@ -13,6 +13,7 @@
   font-size: var(--fnt-size-2xl);
   font-weight: 700;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 .repo-card__info {
@@ -30,4 +31,41 @@
 .repo-card__link {
   font-weight: 600;
   color: var(--clr-primary);
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 700px) {
+  .repo-card {
+    border: 3px solid var(--clr-extralight-grey);
+    border-radius: 1.5rem;
+    flex: 1 0 33%;
+  }
+
+  .repo-card__title {
+    margin-bottom: 0;
+  }
+
+  .repo-card__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  .repo-card__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .repo-card {
+    min-width: 30rem;
+  }
+
+  .repo-card__info {
+    grid-template-columns: 1fr 1fr;
+  }
 }
