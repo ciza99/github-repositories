@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import UserNav from "../UserNav";
 import { userState } from "../../atoms/user";
 import { getUserData } from "../../api";
+import Spinner from "../Spinner";
 
 const classes = new BEMHelper("user-page");
 
@@ -31,7 +32,7 @@ const UserPage = () => {
 
   console.log(user, setUser);
   if (!user) {
-    return <p>Loading</p>;
+    return <Spinner />;
   }
 
   return (

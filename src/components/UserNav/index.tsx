@@ -8,6 +8,7 @@ import FolderOpenOutlinedIcon from "@material-ui/icons/FolderOpenOutlined";
 import DomainOutlinedIcon from "@material-ui/icons/DomainOutlined";
 import NavItem from "../NavItem";
 import Information from "../Information";
+import Spinner from "../Spinner";
 
 const classes = new BEMHelper("user-nav");
 
@@ -28,6 +29,12 @@ const UserNav = () => {
       <Switch>
         <Route path={`${match.path}/info`}>
           <Information />
+        </Route>
+        <Route path={`${match.path}/repos`}>
+          <Spinner />
+        </Route>
+        <Route path={`${match.path}/orgs`}>
+          <Spinner />
         </Route>
       </Switch>
     </div>
