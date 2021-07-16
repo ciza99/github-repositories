@@ -14,7 +14,7 @@ const Repositories = () => {
   return (
     <div {...classes()}>
       {repositories?.map((repository) => (
-        <RepoCard repository={repository} />
+        <RepoCard repository={repository} key={repository.id} />
       ))}
     </div>
   );

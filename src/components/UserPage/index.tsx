@@ -19,7 +19,7 @@ const UserPage = () => {
     const fetchUser = async () => {
       setUser(null);
       try {
-        const { user: fetchedUser } = await getUserData(username);
+        const { data: fetchedUser } = await getUserData(username);
         setUser(fetchedUser);
       } catch (err) {
         console.log(err);
