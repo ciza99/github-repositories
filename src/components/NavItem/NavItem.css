@@ -41,3 +41,16 @@
     max-width: 10rem;
   }
 }
+@media only screen and (min-width: 900px) {
+  .nav-item {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    justify-content: center;
+    max-width: 12rem;
+  }
+
+  .nav-item__text {
+    margin-top: 0;
+  }
+}
