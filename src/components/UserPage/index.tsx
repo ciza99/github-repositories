@@ -39,7 +39,7 @@ const UserPage = () => {
     return (
       <IconMessage Icon={SearchIcon}>
         <p>
-          Unfortunetley, the user{" "}
+          Unfortunately, the user{" "}
           <span {...classes("error-highlight")}>{username}</span> was not found
         </p>
         <p {...classes("error-subtext")}>Try searching for a different user</p>
