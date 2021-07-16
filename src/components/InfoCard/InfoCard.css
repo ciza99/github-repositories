@@ -15,5 +15,6 @@
 @media only screen and (min-width: 700px) {
   .info-card {
     flex: 1 0 33%;
+    padding: 3rem;
   }
 }

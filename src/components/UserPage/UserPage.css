@@ -4,6 +4,7 @@
   width: 100%;
 
   --avatar-size: 8rem;
+  --avatar-size-desktop: 10rem;
   --panel-padding: 2rem;
 }
 
@@ -41,6 +42,12 @@
     --padding-total: calc(var(--header-height) + var(--doubled-padding));
 
     min-height: calc(100vh - var(--padding-total));
+    padding: var(--panel-padding) 4rem;
+  }
+
+  .user-page__avatar {
+    height: var(--avatar-size-desktop);
+    width: var(--avatar-size-desktop);
   }
 
   .user-page__info-wrapper {

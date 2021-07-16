@@ -1,27 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./UserPage.css";
 
 import BEMHelper from "react-bem-helper";
+import { useRecoilState } from "recoil";
+import { useParams } from "react-router-dom";
 import UserNav from "../UserNav";
+import { userState } from "../../atoms/user";
+import { getUserData } from "../../api";
 
 const classes = new BEMHelper("user-page");
 
-const UserPage = () => (
-  <div {...classes()}>
-    <div {...classes("panel")}>
-      <div {...classes("info-wrapper")}>
-        <img
-          {...classes("avatar")}
-          src="https://avatars.githubusercontent.com/u/54907476?v=4"
-          alt="user avatar"
-        />
-        <p {...classes("username")}>ciza99</p>
+const UserPage = () => {
+  const { username } = useParams<{ username: string }>();
+  const [user, setUser] = useRecoilState(userState);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      setUser(null);
+      try {
+        const { user: fetchedUser } = await getUserData(username);
+        setUser(fetchedUser);
+      } catch (err) {
+        console.log(err);
+        setUser(null);
+      }
+    };
+
+    fetchUser();
+  }, [username]);
+
+  console.log(user, setUser);
+  if (!user) {
+    return <p>Loading</p>;
+  }
+
+  return (
+    <div {...classes()}>
+      <div {...classes("panel")}>
+        <div {...classes("info-wrapper")}>
+          <img {...classes("avatar")} src={user.avatar_url} alt="user avatar" />
+          <p {...classes("username")}>{user.login}</p>
+        </div>
+      </div>
+      <div {...classes("content")}>
+        <UserNav />
       </div>
     </div>
-    <div {...classes("content")}>
-      <UserNav />
-    </div>
-  </div>
-);
+  );
+};
 
 export default UserPage;
