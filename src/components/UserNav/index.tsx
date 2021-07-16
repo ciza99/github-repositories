@@ -9,6 +9,7 @@ import DomainOutlinedIcon from "@material-ui/icons/DomainOutlined";
 import NavItem from "../NavItem";
 import Information from "../Information";
 import Spinner from "../Spinner";
+import Repositories from "../Repositories";
 
 const classes = new BEMHelper("user-nav");
 
@@ -26,17 +27,19 @@ const UserNav = () => {
         />
         <NavItem Icon={DomainOutlinedIcon} linkTo="orgs" text="organizations" />
       </nav>
-      <Switch>
-        <Route path={`${match.path}/info`}>
-          <Information />
-        </Route>
-        <Route path={`${match.path}/repos`}>
-          <Spinner />
-        </Route>
-        <Route path={`${match.path}/orgs`}>
-          <Spinner />
-        </Route>
-      </Switch>
+      <React.Suspense fallback={<Spinner />}>
+        <Switch>
+          <Route path={`${match.path}/info`}>
+            <Information />
+          </Route>
+          <Route path={`${match.path}/repos`}>
+            <Repositories />
+          </Route>
+          <Route path={`${match.path}/orgs`}>
+            <Spinner />
+          </Route>
+        </Switch>
+      </React.Suspense>
     </div>
   );
 };

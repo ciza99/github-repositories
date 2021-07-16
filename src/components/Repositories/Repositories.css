@@ -1,0 +1,6 @@
+.repositories {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--screen-padding);
+  row-gap: 2rem;
+}
