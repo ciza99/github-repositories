@@ -16,5 +16,6 @@
   .info-card {
     flex: 1 0 33%;
     padding: 3rem;
+    min-width: 20rem;
   }
 }
