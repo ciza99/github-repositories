@@ -10,6 +10,7 @@ import NavItem from "../NavItem";
 import Information from "../Information";
 import Spinner from "../Spinner";
 import Repositories from "../Repositories";
+import Organizations from "../Organizations";
 
 const classes = new BEMHelper("user-nav");
 
@@ -36,7 +37,7 @@ const UserNav = () => {
             <Repositories />
           </Route>
           <Route path={`${match.path}/orgs`}>
-            <Spinner />
+            <Organizations />
           </Route>
         </Switch>
       </React.Suspense>

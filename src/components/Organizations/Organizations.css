@@ -1,0 +1,14 @@
+.organizations {
+  padding-top: var(--screen-padding);
+  padding-bottom: var(--screen-padding);
+}
+
+@media only screen and (min-width: 700px) {
+  .organizations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
