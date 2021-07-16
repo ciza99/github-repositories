@@ -9,12 +9,14 @@ const classes = new BEMHelper("user-page");
 const UserPage = () => (
   <div {...classes()}>
     <div {...classes("panel")}>
-      <img
-        {...classes("avatar")}
-        src="https://avatars.githubusercontent.com/u/54907476?v=4"
-        alt="user avatar"
-      />
-      <p {...classes("username")}>ciza99</p>
+      <div {...classes("info-wrapper")}>
+        <img
+          {...classes("avatar")}
+          src="https://avatars.githubusercontent.com/u/54907476?v=4"
+          alt="user avatar"
+        />
+        <p {...classes("username")}>ciza99</p>
+      </div>
     </div>
     <div {...classes("content")}>
       <UserNav />

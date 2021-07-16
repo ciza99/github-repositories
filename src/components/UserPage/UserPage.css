@@ -4,11 +4,15 @@
   width: 100%;
 
   --avatar-size: 8rem;
+  --panel-padding: 2rem;
 }
 
 .user-page__panel {
   background-color: var(--clr-extralight-grey);
-  padding: 2rem;
+  padding: var(--panel-padding);
+}
+
+.user-page__info-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,4 +29,26 @@
   margin-top: 0.5rem;
   font-size: var(--fnt-size-2xl);
   font-weight: 700;
+}
+
+@media only screen and (min-width: 700px) {
+  .user-page {
+    flex-direction: row;
+  }
+
+  .user-page__panel {
+    --doubled-padding: calc(var(--panel-padding) * 2);
+    --padding-total: calc(var(--header-height) + var(--doubled-padding));
+
+    min-height: calc(100vh - var(--padding-total));
+  }
+
+  .user-page__info-wrapper {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .user-page__content {
+    flex: 1;
+  }
 }

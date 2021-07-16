@@ -1,4 +1,5 @@
 import React from "react";
+import "./Information.css";
 
 import BEMHelper from "react-bem-helper";
 import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";

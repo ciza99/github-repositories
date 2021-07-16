@@ -3,3 +3,14 @@
   justify-content: space-around;
   border-bottom: 1px solid var(--clr-light-grey);
 }
+
+@media only screen and (min-width: 700px) {
+  .user-nav__nav {
+    justify-content: flex-start;
+    column-gap: 3rem;
+  }
+
+  .user-nav__nav:first-child {
+    padding-left: 1.5rem;
+  }
+}
