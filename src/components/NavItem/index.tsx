@@ -14,16 +14,11 @@ interface Props {
   text: string;
 }
 
-const NavItem: FC<Props> = ({ linkTo, text, Icon }) => {
-  const lol = "";
-  console.log(lol);
-
-  return (
-    <NavLink to={linkTo} {...classes()} activeClassName="nav-item--active">
-      <Icon />
-      <p {...classes("text")}>{text}</p>
-    </NavLink>
-  );
-};
+const NavItem: FC<Props> = ({ linkTo, text, Icon }) => (
+  <NavLink to={linkTo} {...classes()} activeClassName="nav-item--active">
+    <Icon />
+    <p {...classes("text")}>{text}</p>
+  </NavLink>
+);
 
 export default NavItem;

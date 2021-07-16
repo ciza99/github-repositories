@@ -26,7 +26,6 @@ const UserPage = () => {
         const fetchedUser = await getUserData(username);
         setUser(fetchedUser);
       } catch (err) {
-        console.log(err.response);
         setUser(null);
         setError(err?.response?.data?.message || "Unknown error");
       }
@@ -47,7 +46,6 @@ const UserPage = () => {
     );
   }
 
-  console.log(user, setUser);
   if (!user) {
     return (
       <div {...classes("spinner-wrapper")}>
