@@ -13,7 +13,6 @@
   font-size: var(--fnt-size-2xl);
   font-weight: 700;
   margin-bottom: 0.5rem;
-  white-space: nowrap;
 }
 
 .repo-card__info {
@@ -39,6 +38,7 @@
     border: 3px solid var(--clr-extralight-grey);
     border-radius: 1.5rem;
     flex: 1 0 33%;
+    min-width: 15rem;
   }
 
   .repo-card__title {

@@ -24,14 +24,17 @@ const RepoCard: FC<Props> = ({ repository }) => (
       </a>
     </div>
     <div {...classes("info")}>
-      <InfoItem Icon={CodeOutlinedIcon} text={repository.language} />
+      <InfoItem
+        Icon={CodeOutlinedIcon}
+        text={repository.language ?? "language not specified"}
+      />
       <InfoItem
         Icon={CallSplitOutlinedIcon}
         text={`${repository.forks_count} forks`}
       />
       <InfoItem
         Icon={CopyrightOutlinedIcon}
-        text={repository.license?.name || "license unspecified"}
+        text={repository.license?.name || "license not specified"}
       />
       <InfoItem Icon={StorageOutlinedIcon} text={`${repository.size} kB`} />
     </div>

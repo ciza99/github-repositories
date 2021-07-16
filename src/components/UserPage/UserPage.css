@@ -27,6 +27,7 @@
 }
 
 .user-page__username {
+  color: var(--clr-primary);
   margin-top: 0.5rem;
   font-size: var(--fnt-size-2xl);
   font-weight: 700;

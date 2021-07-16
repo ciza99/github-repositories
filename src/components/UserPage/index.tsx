@@ -40,7 +40,9 @@ const UserPage = () => {
       <div {...classes("panel")}>
         <div {...classes("info-wrapper")}>
           <img {...classes("avatar")} src={user.avatar_url} alt="user avatar" />
-          <p {...classes("username")}>{user.login}</p>
+          <a {...classes("username")} href={user.html_url}>
+            {user.login}
+          </a>
         </div>
       </div>
       <div {...classes("content")}>
