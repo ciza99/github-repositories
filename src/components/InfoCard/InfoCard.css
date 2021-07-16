@@ -1,0 +1,13 @@
+.info-card {
+  padding: var(--screen-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card__title {
+  font-size: var(--fnt-size-2xl);
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--clr-light-grey);
+}

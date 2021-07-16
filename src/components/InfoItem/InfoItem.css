@@ -1,0 +1,10 @@
+.info-item {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+
+.info-item__text {
+  font-size: var(--fnt-size-lg);
+  font-weight: 600;
+}

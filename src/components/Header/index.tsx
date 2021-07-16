@@ -4,7 +4,7 @@ import "./Header.css";
 import BEMHelper from "react-bem-helper";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { WhiteButton, WhiteTextField } from "./StyledInputs";
 
 const classes = new BEMHelper("header");
@@ -19,10 +19,10 @@ const Header = () => {
 
   return (
     <header {...classes()}>
-      <div {...classes("title")}>
+      <Link {...classes("title")} to="/">
         <GitHubIcon fontSize="large" />
         <h1 {...classes("heading")}>GitHub-Viewer</h1>
-      </div>
+      </Link>
       <form {...classes("search")} onSubmit={onSubmit}>
         <WhiteTextField
           variant="outlined"
