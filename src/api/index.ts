@@ -5,7 +5,7 @@ import axios from "axios";
 const BASE_URL = "https://api.github.com";
 
 export const getUserData = (username: string) =>
-  axios.get(`${BASE_URL}/users/${username}`);
+  axios.get(`${BASE_URL}/users/${username}`).then((response) => response.data);
 
 export const getRepos = (username: string) => {
   const url = `${BASE_URL}/users/${username}/repos?per_page=250`;
@@ -13,4 +13,6 @@ export const getRepos = (username: string) => {
 };
 
 export const getOrgs = (username: string) =>
-  axios.get(`${BASE_URL}/users/${username}/orgs`);
+  axios
+    .get(`${BASE_URL}/users/${username}/orgs`)
+    .then((response) => response.data);

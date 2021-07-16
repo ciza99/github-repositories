@@ -1,14 +1,14 @@
 import { selector } from "recoil";
-import { getRepos } from "../api";
-import { Repository } from "../types/Repository";
+import { getOrgs } from "../api";
+import { Organization } from "../types/Organisation";
 import { userState } from "./user";
 
-export const organizationsState = selector<Repository[]>({
-  key: "repositories",
+export const organizationsState = selector<Organization[]>({
+  key: "organizations",
   get: async ({ get }) => {
     const username = get(userState)?.login;
     if (!username) return [];
-    return getRepos(username ?? "");
+    return getOrgs(username ?? "");
   },
 });
 
