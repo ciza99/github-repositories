@@ -1,10 +1,10 @@
 .icon-message {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem var(--screen-padding);
   font-size: var(--fnt-size-xl);
   font-weight: 600;
   row-gap: 1rem;
+  text-align: center;
 }
