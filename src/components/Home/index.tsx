@@ -30,7 +30,7 @@ const Home = () => (
       />
       <FeatureCard
         Icon={DomainIcon}
-        title="View organisations"
+        title="View organizations"
         text="Find users organizations and link to more information."
       />
     </div>
