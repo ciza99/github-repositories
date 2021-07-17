@@ -14,20 +14,20 @@ import IconMessage from "../IconMessage";
 const classes = new BEMHelper("user-page");
 
 const UserPage = () => {
-  const [error, setError] = useState<null | string>();
+  const [error, setError] = useState<boolean>(false);
   const { username } = useParams<{ username: string }>();
   const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
     const fetchUser = async () => {
       setUser(null);
-      setError(null);
+      setError(false);
       try {
         const fetchedUser = await getUserData(username);
         setUser(fetchedUser);
       } catch (err) {
         setUser(null);
-        setError(err?.response?.data?.message || "Unknown error");
+        setError(true);
       }
     };
 
