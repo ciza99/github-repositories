@@ -2,7 +2,7 @@ import React from "react";
 import "./UserNav.css";
 
 import BEMHelper from "react-bem-helper";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FolderOpenOutlinedIcon from "@material-ui/icons/FolderOpenOutlined";
 import DomainOutlinedIcon from "@material-ui/icons/DomainOutlined";
@@ -44,6 +44,9 @@ const UserNav = () => {
           </Route>
           <Route path={`${match.path}/orgs`}>
             <Organizations />
+          </Route>
+          <Route>
+            <Redirect to="/not-found" />
           </Route>
         </Switch>
       </React.Suspense>
