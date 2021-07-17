@@ -12,7 +12,7 @@ const classes = new BEMHelper("app");
 
 const App = () => (
   <div {...classes()}>
-    <Router>
+    <Router basename="/github-repositories">
       <Header />
       <Switch>
         <Route exact path="/">
