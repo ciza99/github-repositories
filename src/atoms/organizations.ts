@@ -1,6 +1,6 @@
 import { selector } from "recoil";
 import { getOrgs } from "../api";
-import { Organization } from "../types/Organisation";
+import { Organization } from "../types/Organization";
 import { userState } from "./user";
 
 export const organizationsState = selector<Organization[]>({

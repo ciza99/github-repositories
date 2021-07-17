@@ -3,7 +3,7 @@ import "./OrgCard.css";
 
 import BEMHelper from "react-bem-helper";
 import { Link } from "react-router-dom";
-import { Organization } from "../../types/Organisation";
+import { Organization } from "../../types/Organization";
 
 const classes = new BEMHelper("org-card");
 
