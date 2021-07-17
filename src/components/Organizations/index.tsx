@@ -29,7 +29,7 @@ const Organizations = () => {
   return (
     <div {...classes()}>
       {organizations.map((organization) => (
-        <OrgCard org={organization} />
+        <OrgCard org={organization} key={organization.id} />
       ))}
     </div>
   );

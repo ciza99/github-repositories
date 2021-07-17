@@ -14,7 +14,9 @@ const Header = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = handleSubmit((data) => {
-    history.push(`/users/${data.username}/info`);
+    const { username } = data;
+    if (!username) return;
+    history.push(`/users/${username}/info`);
   });
 
   return (
@@ -28,6 +30,7 @@ const Header = () => {
           variant="outlined"
           label="username"
           size="small"
+          required
           {...register("username")}
         />
         <WhiteButton variant="outlined" type="submit">
