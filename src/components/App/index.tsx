@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../Header";
 import Home from "../Home";
 import UserPage from "../UserPage";
+import NotFound from "../NotFound";
 
 const classes = new BEMHelper("app");
 
@@ -19,6 +20,9 @@ const App = () => (
         </Route>
         <Route path="/users/:username">
           <UserPage />
+        </Route>
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
     </Router>

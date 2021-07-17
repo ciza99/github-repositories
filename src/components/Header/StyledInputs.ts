@@ -2,8 +2,11 @@ import { Button, TextField, withStyles } from "@material-ui/core";
 
 export const WhiteTextField = withStyles({
   root: {
-    "& label.Mui-focused, & .MuiInputBase-input, & .MuiFormLabel-root": {
+    "& .MuiInputBase-input": {
       color: "white",
+    },
+    "& .MuiFormLabel-root": {
+      color: "#ededed",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
